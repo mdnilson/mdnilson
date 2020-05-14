@@ -13,42 +13,23 @@ body
 {
     background-color: #97689c;
 }
-img {
-    max-width: 100%;
-}
+
 .feature {
-    position: relative;
+    background-image: url("../img/pano.jpg");
+    background-size: cover;
+    height: 80vh;
+    background-position: center center;
 }
 
-.feature img {
-    width: 100%;
-}
-
-.feature-text {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    font-size: 0;
-}
-
-.feature-text:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-}
-
-.feature-text p {
-    display: inline-block;
-    vertical-align: middle;
+.feature-text
+{
+    display: flex;
+    justify-content: center;
     text-align: center;
+    align-items: center;
     width: 100%;
-    background: rgba(74, 82, 95, 0.2);
-    border-radius: 10px;
     color: white;
-    font-size: 48px;
-    padding: 3%;
-    line-height: 80px;
+    font-size: 4rem;
 }
 @media screen and (max-width : 768px) {
 
@@ -61,16 +42,5 @@ img {
         line-height: 28px;
     }
 
-    h2 {
-        font-size: 1.6em;
-    }
-
-    footer, .address {
-        text-align: center;
-    }
-
-    footer ul, address {
-        border-bottom: 1px dotted;
-    }
 
 }

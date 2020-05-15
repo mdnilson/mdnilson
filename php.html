@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>mdnilson - stona główna</title>
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- My styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- Navigation -->
+        <nav class="navbar navbar-dark navbar-expand-md bg-mdnilson">
+            <a class="navbar-brand" href="index.html">MD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">PHP <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- main section -->
+        <div class="container">
+            <pre><code>
+                &lt;?php
+    
+    echo &apos;Hello World in PHP&lt;br&gt;&apos;;
+    <span class="green">&sol;&sol;comments or:
+    
+    &sol;*more
+    comments
+    *&sol;</span>
+    
+                                        &sol;&sol;VARIABLES
+    
+    $variable &equals; &quot;Hello variable :&rpar;&lt;br&gt;&quot;;
+    $variable2 &equals; &apos;I\&apos;m a variable&lt;br&gt;&apos;&semi; &sol;&sol;escapting sign
+    $variable3 &equals; &quot;I am&quot; . &quot; a variable 3&lt;br&gt;&quot;&semi;    <span class="green">&sol;&sol;no + sign. Use a dot.</span>
+    echo $variable;
+    echo $variable2;
+    echo $variable3;
+    
+    $age &equals; 22;
+    echo &quot;My age is $age &lt;br&gt;&quot;&semi; <span class="green">&sol;&sol;double quouts only &quot;&quot; | or need to use a dot .</span>
+    
+    $a &equals; &quot;age&quot;;
+    
+    echo &quot;My age is &quot; . $$a . &quot;&lt;br&gt;&quot;&semi; <span class="green">&sol;&sol;robimy (przywołujemy) zmienna o nazwie zmiennej</span>
+    
+    
+                                        &sol;&sol;ARRAYS
+    
+    $array &equals; array(&apos;name&apos;, &apos;email&apos;, &apos;address&apos;)&semi;
+    
+    print_r($array); <span class="green">&sol;&sol;to view what&apos;s inside</span>
+    
+    echo $array[0];
+    
+    <span class="green">&sol;&sol;other way to create array</span>
+    
+    $array2[] &equals; &quot;salad&quot;;
+    $array2[] &equals; &quot;bowl&quot;;
+    print_r($array2);
+    
+    <span class="green">&sol;&sol;next way</span>
+    
+    $array3 &equals; array(
+        &apos;name&apos; &equals;&gt; &apos;John&apos;,
+        &apos;lastname&apos; &equals;&gt; &quot;Sadowski&quot;,    
+    );
+    print_r($array3);
+    echo $array3[&quot;name&quot;]&semi;
+    
+                            &sol;&sol; IF, ELSE, SWITCH
+    
+    $number &equals; 2;
+    if ($number &equals;&equals; 1) &lcub;
+        echo &quot;&lt;br&gt;numer is 1&lt;br&gt;&quot;&semi;
+        
+    &rcub else &lcub;
+        echo &quot;&lt;br&gt;number is not 1&lt;br&gt;&quot;&semi;
+    &rcub
+    
+    <span class="green">&sol;&sol; && - and | &equals;&equals;&equals; checks the value and data type 1&equals;&equals;&equals;&quot;1&quot;</span>
+    <span class="green">&sol;&sol; the same with !&equals;&equals;</span>
+    <span class="green">&sol;&sol; we can do elseif () &lcub;&rcub;</span>
+    
+    switch ($number) &lcub;
+        case 1:
+            echo &quot;&lt;br&gt;Number is equal to 1&quot;;
+            break;
+        case 2:
+            echo &quot;&lt;br&gt;Number is equal to 2&quot;;
+            break;
+            
+        default:
+            echo &apos;No idea&apos;;
+            break;
+    &rcub;
+    ?&gt;
+            </code></pre>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div>&copy;mdnilson, 2020</div>
+        </footer>
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

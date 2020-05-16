@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>mdnilson - stona główna</title>
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- My styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- Navigation -->
+        <nav class="navbar navbar-dark navbar-expand-md bg-mdnilson">
+            <a class="navbar-brand" href="index.html">MD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="css.html">CSS <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="php.html">PHP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- main section -->
+        <main class="container">
+            <article>
+                <h1>Pozycja elementów na stronie</h1>
+                <p>
+                    Przy pomocy atrybutu <mark>position:</mark> możemy zmienić pozycję elementu na stronie.
+                <div class="example">
+                    <code>
+                        &period;box &lcub;<br>
+                        &#x00009;position: relative;<br>
+                        &#x00009;top: 0;<br>
+                        &rcub;
+                    </code>
+                </div>
+                </p>
+
+                <h2>Position może posiadać 6 różnych wartości:</h2>
+                <ul>
+                    <li>static</li>
+                    <li>relative</li>
+                    <li>absolute</li>
+                    <li>fixed</li>
+                    <li>sticky</li>
+                    <li>inherit</li>
+                </ul>
+
+                <h3>static</h3>
+                <p>
+                    Każdy element domyślnie posiada tę wartość. Ustawianie <mark>/right/top/bottom/z-index</mark> w tym
+                    przypadku nie działa.
+                    <img class="codepen" src="img/position-static.jpg" alt="box position">
+                </p>
+                <h3>relative</h3>
+
+                <p>
+                    Element pozostaje widoczny dla sąsiednich elementów, ale <mark>left/right/top/bottom/z-index</mark>
+                    działają, więc możemy ten element przesunąć w inne położenie.
+                </p>
+                <div class="example">
+                    <code>
+                        &period;box2
+                        &lcub;<br>
+                        &#x00009;background-color: #B294FF;<br>
+                        &#x00009;color: white;<br>
+                        &#x00009;position: relative;<br>
+                        &#x00009;top: 20px;<br>
+                        &#x00009;left: 20px;<br>
+                        &rcub;
+                    </code>
+                </div>
+                <div>
+                    <img class="codepen" src="img/position-relative.jpg" alt="position relative">
+                </div>
+                <h3>absolute</h3>
+                <p>Element zachowuje się, jakby go nie było w porządku innych elementów. Jest "wyjęty".<br>
+                    Jeżeli "rodzic" (tutaj class="background") nie ma ustawionej pozycji na: <mark>relative</mark>, to
+                    BOX 2 ustawi swoją pozycję względem <mark>body</mark>.
+                </p>
+                <div>
+                    <img class="codepen" src="img/struktura.jpg" alt="struktura">
+                </div>
+                <div class="example">
+                    <code>
+                        &period;box2
+                        &lcub;<br>
+                        &#x00009;background-color: #B294FF;<br>
+                        &#x00009;color: white;<br>
+                        &#x00009;position: absolute;<br>
+                        &#x00009;top: 0;<br>
+                        &#x00009;left: 0;<br>
+                        &rcub;
+                    </code>
+                </div>
+                <div>
+                    <img class="codepen" src="img/position-absolute1.jpg" alt="position absolute 1">
+                </div>
+                <p>Po ustawieniu position: relative; dla "background":</p>
+                <div>
+                    <img class="codepen" src="img/position-absolute2.jpg" alt="position absolute 2">
+                </div>
+                <h3>fixed</h3>
+                <p>
+                    Element zachowuje się bardzo podobnie jak w przypadku <mark>position: relative;</mark>. Różnica
+                    polega na tym, że zawsze odnosi się z pozycją do całej strony i nie działa na niego przewijanie
+                    strony.
+                </p>
+                <h3>sticky</h3>
+                <p><strong>Nie działa we wszystkich przeglądarkach</strong></p>
+                <p>
+                    Zachowuje się jak <mark>position: relative;</mark>, do momentu aż przewijanie strony zaprowadzi go
+                    do ustawionego miejsca. W miejscu tym zachowuje się jak <mark>position: fixed;</mark> (zostaje tam
+                    "przyklejony").
+                </p>
+                <h3>inherit</h3>
+                <p>
+                    Można użyć, żeby nadać atrybut <mark>position</mark> taki sam, jak u "rodzica".
+                </p>
+                <!-- 
+
+
+sticky (experimental): the element is treated like a relative value until the scroll location of the viewport reaches a specified threshold, at which point the element takes a fixed position where it is told to stick.
+inherit: the position value doesn’t cascade, so this can be used to specifically force it to, and inherit the positioning value from its parent. -->
+            </article>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>&copy;mdnilson, 2020</div>
+    </footer>
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

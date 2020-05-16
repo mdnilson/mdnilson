@@ -44,84 +44,113 @@
         </nav>
         <!-- main section -->
         <div class="container">
-            <pre><code>
-                &lt;?php
-    
-    echo &apos;Hello World in PHP&lt;br&gt;&apos;;
-    <span class="green">&sol;&sol;comments or:
-    
-    &sol;*more
-    comments
-    *&sol;</span>
-    
-                                        &sol;&sol;VARIABLES
-    
-    $variable &equals; &quot;Hello variable :&rpar;&lt;br&gt;&quot;;
-    $variable2 &equals; &apos;I\&apos;m a variable&lt;br&gt;&apos;&semi; &sol;&sol;escapting sign
-    $variable3 &equals; &quot;I am&quot; . &quot; a variable 3&lt;br&gt;&quot;&semi;    <span class="green">&sol;&sol;no + sign. Use a dot.</span>
-    echo $variable;
-    echo $variable2;
-    echo $variable3;
-    
-    $age &equals; 22;
-    echo &quot;My age is $age &lt;br&gt;&quot;&semi; <span class="green">&sol;&sol;double quouts only &quot;&quot; | or need to use a dot .</span>
-    
-    $a &equals; &quot;age&quot;;
-    
-    echo &quot;My age is &quot; . $$a . &quot;&lt;br&gt;&quot;&semi; <span class="green">&sol;&sol;robimy (przywołujemy) zmienna o nazwie zmiennej</span>
-    
-    
-                                        &sol;&sol;ARRAYS
-    
-    $array &equals; array(&apos;name&apos;, &apos;email&apos;, &apos;address&apos;)&semi;
-    
-    print_r($array); <span class="green">&sol;&sol;to view what&apos;s inside</span>
-    
-    echo $array[0];
-    
-    <span class="green">&sol;&sol;other way to create array</span>
-    
-    $array2[] &equals; &quot;salad&quot;;
-    $array2[] &equals; &quot;bowl&quot;;
-    print_r($array2);
-    
-    <span class="green">&sol;&sol;next way</span>
-    
-    $array3 &equals; array(
-        &apos;name&apos; &equals;&gt; &apos;John&apos;,
-        &apos;lastname&apos; &equals;&gt; &quot;Sadowski&quot;,    
-    );
-    print_r($array3);
-    echo $array3[&quot;name&quot;]&semi;
-    
-                            &sol;&sol; IF, ELSE, SWITCH
-    
-    $number &equals; 2;
-    if ($number &equals;&equals; 1) &lcub;
-        echo &quot;&lt;br&gt;numer is 1&lt;br&gt;&quot;&semi;
-        
-    &rcub else &lcub;
-        echo &quot;&lt;br&gt;number is not 1&lt;br&gt;&quot;&semi;
-    &rcub
-    
-    <span class="green">&sol;&sol; && - and | &equals;&equals;&equals; checks the value and data type 1&equals;&equals;&equals;&quot;1&quot;</span>
-    <span class="green">&sol;&sol; the same with !&equals;&equals;</span>
-    <span class="green">&sol;&sol; we can do elseif () &lcub;&rcub;</span>
-    
-    switch ($number) &lcub;
-        case 1:
-            echo &quot;&lt;br&gt;Number is equal to 1&quot;;
-            break;
-        case 2:
-            echo &quot;&lt;br&gt;Number is equal to 2&quot;;
-            break;
-            
-        default:
+            <p>Kod umieszczamy między tymi znacznikami:</p>
+            <div class="example">
+                <code>
+                &lt;?php<br>
+                ?&gt;<br>
+                </code>
+            </div>
+            <div class="example">
+                <code>
+                    &lt;?php<br>
+                    echo &apos;Hello World in PHP&apos;;<br>
+                    &sol;&sol;comments <br>
+                    &sol;*more comments *&sol;<br>
+                    ?&gt;
+                </code>
+            </div>
+
+            <h3>VARIABLES</h3>
+            <div class="example">
+                <code>
+                    &lt;?php<br>
+                &dollar;variable &equals; &quot;Hello variable :&rpar;&quot;;<br>
+                &dollar;variable2 &equals; &apos;I\&apos;m a variable&apos;&semi; <span class="komentarz"> &sol;&sol;<mark>&bsol;</mark>escaping sign (pozwala użyć pojedyńczego <mark>&apos;</mark></span><br>
+                &dollar;variable3 &equals; &quot;I am&quot; . &quot; a variable 3&quot;&semi; <span
+                    class="komentarz">&sol;&sol;zamiast <mark>&plus;</mark> używamy kropki, żeby połączyć stringi</span><br>
+                echo &dollar;variable;<br>
+                echo &dollar;variable2;<br>
+                echo &dollar;variable3;<br>
+                    ?&gt;
+                </code>
+            </div>
+            <div class="example">
+                <code>
+                    &lt;?php<br>
+                &dollar;age &equals; 22;<br>
+                echo &quot;My age is &dollar;age &quot;&semi; <span class="komentarz">&sol;&sol;działa tylko z podwójnymi cudzysłowami<mark>&quot;</mark>
+                    &quot;&quot; | jeżeli pojedyńcze, to trzeba użyć kropki <mark>&period;</mark></span><br>
+
+                &dollar;a &equals; &quot;age&quot;;<br>
+
+                echo &quot;My age is &quot; . &dollar;&dollar;a . &quot;&lt;br&gt;&quot;&semi; <span
+                    class="komentarz">&sol;&sol;robimy
+                    (przywołujemy) zmienną o nazwie zmiennej. (deklarujemy zmienną o nazwie<mark>&dollar;a</mark>. Ponieważ wcześniej już mamy zmienną o takiej nazwie, nasza nowa zmienna przyjmuje wartość <mark>22</mark>. &dollar;&dollar;a => &dollar;age => 22).</span><br>
+                    ?&gt;
+                </code>
+            </div>
+
+            <h3>ARRAYS</h3>
+            <div class="example">
+                <code>
+                    &lt;?php<br>
+                    &dollar;array &equals; array(&apos;name&apos;, &apos;email&apos;, &apos;address&apos;)&semi;<br>
+
+                    print_r(&dollar;array); <span class="komentarz">&sol;&sol;żeby zobaczyć, co jest wewnątrz</span><br>
+
+                    echo &dollar;array[0];
+
+                    <span class="komentarz">&sol;&sol;inny sposób na stworzenie array</span><br>
+
+                    &dollar;array2[] &equals; &quot;salad&quot;;<br>
+                    &dollar;array2[] &equals; &quot;bowl&quot;;<br>
+                    print_r(&dollar;array2);<br>
+
+                    <span class="komentarz">&sol;&sol;next way</span><br>
+
+                    &dollar;array3 &equals; array(
+                    &apos;name&apos; &equals;&gt; &apos;John&apos;,
+                    &apos;lastname&apos; &equals;&gt; &quot;Sadowski&quot;,
+                    );<br>
+                    print_r(&dollar;array3);<br>
+                    echo &dollar;array3[&quot;name&quot;]&semi;<br>
+                    ?&gt;
+                </code>
+            </div>
+
+            <h3>IF, ELSE, SWITCH</h3>
+            <div class="example">
+                <code>
+                    &lt;?php<br>
+            &dollar;number &equals; 2;<br><br>
+            if (&dollar;number &equals;&equals; 1) &lcub;<br><br>
+            echo &quot;&lt;br&gt;numer is 1&lt;br&gt;&quot;&semi;<br><br>
+
+            &rcub; else &lcub;<br><br>
+            echo &quot;&lt;br&gt;number is not 1&lt;br&gt;&quot;&semi;<br><br>
+            &rcub;
+
+            <span class="komentarz">&sol;&sol; && - and | &equals;&equals;&equals; sprawdza nie tylko wartość, ale też typ zmiennej.
+                1&equals;&equals;&equals;&quot;1&quot;</span>
+            <span class="komentarz">&sol;&sol; podobnie jest z <mark>!&equals;&equals;</mark></span>
+            <span class="komentarz">&sol;&sol; można użyć: elseif () &lcub;&rcub;</span><br><br>
+
+            switch (&dollar;number) &lcub;<br>
+            case 1:<br>
+            echo &quot;Number is equal to 1&quot;;<br>
+            break;<br>
+            case 2:<br>
+            echo &quot;&lt;br&gt;Number is equal to 2&quot;;<br>
+            break;<br>
+
+            default:
             echo &apos;No idea&apos;;
-            break;
-    &rcub;
-    ?&gt;
-            </code></pre>
+            break;<br>
+            &rcub;<br>
+            ?&gt;
+            </code>
+            </div>
         </div>
 
         <!-- Footer -->

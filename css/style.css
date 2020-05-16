@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5
     background-size: cover;
     height: 80vh;
     background-position: center center;
+    display: flex;
 }
 
 .feature-text
@@ -35,19 +36,7 @@ h1, h2, h3, h4, h5
     color: white;
     font-size: 4rem;
 }
-@media screen and (max-width : 768px) {
 
-    li a {
-        text-align: center;
-    }
-
-    .feature-text p {
-        font-size: 28px;
-        line-height: 28px;
-    }
-
-
-}
 .green
 {
     color: green;
@@ -75,4 +64,19 @@ h1, h2, h3, h4, h5
 .komentarz
 {
     color: #FFE138;
+}
+@media screen and (max-width : 768px) {
+
+    li a {
+        text-align: center;
+    }
+
+    .feature-text p {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .feature
+    {
+        height: 40vh;
+    }
 }

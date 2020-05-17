@@ -37,14 +37,17 @@
                         <a class="nav-link" href="php.html">PHP</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="contact.php">Contact <span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!-- main section -->
         <main>
+<?php
+    echo "<h1>Miejsce na formularz kontaktowy</h1>";
 
+?>
 
         </main>
     </div>

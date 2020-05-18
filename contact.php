@@ -31,7 +31,7 @@
                         <a class="nav-link" href="css.html">CSS</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Python</a>
+                        <a class="nav-link" href="python.html">Python</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="php.html">PHP</a>

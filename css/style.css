@@ -57,9 +57,11 @@ h1, h2, h3, h4, h5
 }
 .codepen
 {
-    width: 30vw;
+    width: 100%;
+    max-width: 370px;
     margin: 20px 0;
     border-radius: 20px;
+    display: block;
 }
 .komentarz
 {

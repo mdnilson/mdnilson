@@ -75,6 +75,34 @@ if ( ! empty( $_POST ) ) {
 </head>
 
 <body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-dark navbar-expand-md bg-mdnilson">
+            <a class="navbar-brand" href="index.html">MD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="css.html">CSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="python.html">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="php.html">PHP</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.php">Contact <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- main section -->
    <section class="section" id="contact-form">
 		<div class="container">
 			<div class="row">

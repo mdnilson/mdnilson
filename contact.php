@@ -52,7 +52,7 @@ if ( ! empty( $_POST ) ) {
 
 	// Check and process
 	if ( empty( $errors ) ) {
-		$sent = mail( $email_address, $subject, $fields['message'] );
+		$sent = mail( $email_address, $subject, $fields['message'], $fields['email'] );
 	}
 }
 ?>

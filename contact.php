@@ -26,7 +26,7 @@
                     <a class="nav-link" href="../index.html">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button"
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CSS</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="pozycja.html">Pozycja elementów</a></li>
